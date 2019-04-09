@@ -1,0 +1,43 @@
+
+/* .navbar {
+    margin-bottom: 20px;
+} */
+
+.nav-link {
+    text-align: right;
+}
+
+#buttons-area {
+    margin-left: 80px;
+    align-self: auto;
+    height: 80px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#gif-area {
+    margin-left: 95px;
+    height: 480px;
+    margin-bottom: 20px;
+}
+#music-area{
+    height: 480px;
+    margin-left: 38px;
+    margin-bottom: 20px;
+}
+
+#share-area {
+    margin-left: 80px;
+    align-self: auto;
+    height: 80px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;  
+    width: auto;
+    bottom: 0;
+    position: relative;
+}
