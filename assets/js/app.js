@@ -1,6 +1,6 @@
 //Create an array of strings to give the app some starter mood buttons. 
 
-var moods = ["happy", "mad", "confused"];
+var moods = ["happy", "angry", "funny", "nervous", "romantic", "sad", "peaceful"];
 console.log(moods);
 
 //Take the moods in this array and create buttons in the HTML.
@@ -10,7 +10,7 @@ function makeButtons () {
     for (var i = 0; i < moods.length; i++){ 
 
     var button = $("<button>");
-    button.addClass("topic");
+    button.addClass("mood");
     button.attr("data-name", moods[i]);
     button.text(moods[i]);
     $("#addButton").append(button);
@@ -19,17 +19,17 @@ function makeButtons () {
 };
 
 
-$("#getGifs").on("click", function () {
+$("#submit-mood-button").on("click", function () {
 //Put the user's mood input into the buttons and console log the input.
 
-    var userInput = $("#gif-input").val().trim();
-    console.log($("#gif-input"));
-    topics.push(userInput);
+    var userInput = $("#mood-input").val().trim();
+    console.log($("#mood-input"));
+    moods.push(userInput);
     makeButtons();
     return false;
 
     if (userInput === "") {
-        $("#gif-input").val().trim();
+        $("#mood-input").val().trim();
     }
 });
 
