@@ -15,7 +15,7 @@ function makeButtons () {
     button.text(moods[i]);
     $("#addButton").append(button);
     }
-    getGifs();
+    submitMoodButton();
 };
 
 
@@ -37,7 +37,7 @@ $("#submit-mood-button").on("click", function () {
 
 makeButtons();
 
-function getGifs() {
+function submitMoodButton() {
     //When the user clicks  a button, the page should grab 5 static, non-animated gifs from the GIPHY API and place them on the page.
 
     //update API key, if needed
