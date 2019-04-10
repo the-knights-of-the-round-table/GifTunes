@@ -18,13 +18,13 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">GIFtunes</a>
+    <nav class="navbar navbar-expand-lg">
+            <img class="logo" src="assets/images/giftunes.png" alt="Giftunes" width="8%">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">About</a>
@@ -35,9 +35,11 @@
                         Themes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">RED</a>
-                        <a class="dropdown-item" href="#">BLUE</a>
-                        <a class="dropdown-item" href="#">GREEN</a>
+                        <ul>
+                            <li><a class="dropdown-item" href="#">RED</a></li>
+                            <li><a class="dropdown-item" href="#">BLUE</a></li>
+                            <li><a class="dropdown-item" href="#">GREEN</a></li>
+                        </ul>
                     </div>
                 </li>
             </ul>
@@ -46,15 +48,15 @@
     <!-- MOOD BUTTON AREA-->
     <div class="container-fluid">
         <div class="row" id="buttons-area">
-            <div class="col-11" style="background-color:#aaa;">
-
-                <button id="happy-button">Happy</button>
-                <button id="angry-button">Angry</button>
-                <button id="funny-button">Funny</button>
-                <button id="nervous-button">Nervous</button>
-                <button id="romantic-button">Romantic</button>
-                <button id="sad-button">Sad</button>
-                <button id="peaceful-button">Peaceful</button>
+            <div class="col-11" style="background-color: none;">
+                <div class="wrapper">
+                <button class="buttons-mood" id="happy-button">Happy</button>
+                <button class="buttons-mood" id="angry-button">Angry</button>
+                <button class="buttons-mood" id="funny-button">Funny</button>
+                <button class="buttons-mood" id="nervous-button">Nervous</button>
+                <button class="buttons-mood" id="romantic-button">Romantic</button>
+                <button class="buttons-mood" id="sad-button">Sad</button>
+                <button class="buttons-mood" id="peaceful-button">Peaceful</button>
 
                 <form class="form-inline">
                     <input id="mood-input" class="form-control mr-sm-2" type="search" placeholder="Mood Search"
@@ -62,18 +64,19 @@
                     <button id="submit-mood-button" class="btn btn-outline-success my-2 my-sm-4"
                         type="submit">Submit</button>
                 </form>
+                </div>
             </div>
         </div>
         <br>
         <div class="row">
 
             <!-- GIF LEFT COLUMN -->
-            <div class="col-5" id="gif-area" style="background-color:#aaa;">
+            <div class="col-5" id="gif-area" style="background-color:rgb(245, 245, 245, 0.3);">
                 <h2>Gif area</h2>
             </div>
 
             <!-- MUSIC RIGHT COLUMN -->
-            <div class="col-5" id="music-area" style="background-color:#bbb;">
+            <div class="col-5" id="music-area" style="background-color:rgb(245, 245, 245, 0.3);">
                 <h2>Music area</h2>
             </div>
         </div>
