@@ -1,12 +1,35 @@
-
-/* .navbar {
-    margin-bottom: 20px;
-} */
-
-.nav-link {
-    text-align: right;
+body{
+    background: url(../images/papers.co-va21-smooth-rainbow-floor-pattern-8-wallpaper.jpg) no-repeat top center;
+}
+.logo{
+    margin-left: 120px;
+}
+.navbar{
+    background-color: white;
+}
+#navbarDropdownMenuLink {
+    margin-right: 150px;
 }
 
+.nav-link{
+    margin: 20px;
+}
+.wrapper {
+    text-align: center;
+}
+button{
+    /* margin: 10px; */
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 20px;
+    border-style: solid white;
+    /* margin-inline-start: 100px;
+    margin-inline-end: 80px;
+    margin-top: 20px; */
+}
 #buttons-area {
     margin-left: 80px;
     align-self: auto;
