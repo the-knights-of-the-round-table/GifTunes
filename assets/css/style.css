@@ -1,41 +1,78 @@
-body{
+body {
     background: url(../images/papers.co-va21-smooth-rainbow-floor-pattern-8-wallpaper.jpg) no-repeat top center;
+    /* background: black; */
 }
-.logo{
+
+.logo {
     margin-left: 120px;
 }
-.navbar{
-    background-color: white;
+
+nav {
+    position: fixed !important;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    color: white;
 }
+
+nav.scroll {
+    background-color: black;
+    color: #eef;
+    z-index: 1010;
+  }
+
+
 #navbarDropdownMenuLink {
     margin-right: 150px;
 }
 
-.nav-link{
+.nav-link {
     margin: 20px;
+    color: white !important;
 }
+
 .wrapper {
     text-align: center;
 }
-button{
-    /* margin: 10px; */
+.container-fluid{
+    margin-top: 140px;
+}
+button {
+    margin: 10px;
     background-color: transparent;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
-    padding: 15px;
     border-radius: 20px;
-    border-style: solid white;
-    /* margin-inline-start: 100px;
-    margin-inline-end: 80px;
-    margin-top: 20px; */
+    border-style: solid white 5px;
 }
+
+#submit-mood-button {
+    background-color: transparent;
+    color: white !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: solid white 3px;
+}
+
 #buttons-area {
     margin-left: 80px;
     align-self: auto;
-    height: 80px;
+    height: 120px;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+#mood-input {
+    height: 50px;
+    width: 250px;
+    border-radius: 20px;
+    margin-left: 480px;
 }
 
 #gif-area {
@@ -43,7 +80,8 @@ button{
     height: 480px;
     margin-bottom: 20px;
 }
-#music-area{
+
+#music-area {
     height: 480px;
     margin-left: 38px;
     margin-bottom: 20px;
@@ -57,9 +95,9 @@ button{
     margin-bottom: 30px;
 }
 
-footer{
+footer {
     text-align: center;
-    padding: 20px;  
+    padding: 20px;
     width: auto;
     bottom: 0;
     position: relative;
