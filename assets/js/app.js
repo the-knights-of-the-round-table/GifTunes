@@ -47,7 +47,7 @@ function getGifs() {
 
     $('.mood').on('click', function() { 
         var p = $(this).data('name');
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=Zr9700pOmpA44mJSPmhkDZFXmLkzWOk9&limit=5";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=Zr9700pOmpA44mJSPmhkDZFXmLkzWOk9&limit=6";
 
         $.ajax({ url: queryURL, method: 'GET'})
         .done(function(response) {
@@ -61,15 +61,18 @@ function getGifs() {
             for (var i=0; i < results.length; i++) {
 
                 var gifDiv = $('<div class="item">'); //don't understand why this works but doesn't with ""
-                
+                gifDiv.attr("style", "margin:6px", "size=30%", "width:20em");     
+
                 var giphyImg = $("<img>");
+                giphyImg.attr("ID", "gif-style");
+                
                 giphyImg.attr("src", results[i].images.fixed_height_still.url);
                 giphyImg.attr("data-animate", results[i].images.fixed_height.url);
 
                 gifDiv.append(giphyImg)
                 // gifDiv.append(p)
 
-                $("#gif-area").prepend(gifDiv);
+                $("#gif-row").prepend(gifDiv);
             }
 
             $(".item").children("img").on("click", function() {
