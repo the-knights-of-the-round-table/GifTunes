@@ -61,9 +61,13 @@ function getGifs() {
             for (var i=0; i < results.length; i++) {
 
                 var gifDiv = $('<div class="item">'); //don't understand why this works but doesn't with ""
-                gifDiv.attr("style", "margin:6px", "size=30%", "width:20em");     
-
+                gifDiv.addClass("card btn-space mx-auto");
+                gifDiv.attr("style", "margin:6px");     
+                var gifDivBody = $("<div>");
+                gifDivBody.addClass("card-body");
                 var giphyImg = $("<img>");
+                giphyImg.attr("class","img-responsive");
+                giphyImg.css({"width": "200px"});
                 giphyImg.attr("ID", "gif-style");
                 
                 giphyImg.attr("src", results[i].images.fixed_height_still.url);
@@ -146,7 +150,7 @@ $("#happy-button").on("click", function () {
 
 });
 
-// SHARE YOUR GIF/TUNE AREA - EMAIL/TEXT
+// SHARE YOUR GIF/TUNE AREA - EMAIL/TEXT - this code works!
 function myFunction() {
     var send = document.getElementById("share-area");
     if (send.style.display === "none") {
