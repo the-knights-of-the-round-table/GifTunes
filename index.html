@@ -8,7 +8,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- CSS  -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -17,7 +17,8 @@
     <title>GifTunes</title>
 </head>
 
-<body>
+<body background= "assets/images/papers.co-va21-smooth-rainbow-floor-pattern-8-wallpaper.jpg" no-repeat top center;>
+
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg" id="interactive-navbar">
             <img class="logo" src="assets/images/giftunes.png" alt="Giftunes" width="8%">
@@ -28,7 +29,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="index2.html">About</a>
                 </li>   
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -48,32 +49,33 @@
     </nav>
     <!-- MOOD BUTTON AREA-->
     <div class="container-fluid">
-        <div class="row" id="buttons-area">
+        <div class="row">
             <div class="col-11" style="background-color: none;">
-                <div class="wrapper">
-                <button class="buttons-mood" id="happy-button">Happy</button>
-                <button class="buttons-mood" id="angry-button">Angry</button>
-                <button class="buttons-mood" id="funny-button">Funny</button>
-                <button class="buttons-mood" id="nervous-button">Nervous</button>
-                <button class="buttons-mood" id="romantic-button">Romantic</button>
-                <button class="buttons-mood" id="sad-button">Sad</button>
-                <button class="buttons-mood" id="relax-button">Relax</button>
-                <button class="buttons-mood" id="crazy-button">Crazy</button>
-                <button class="buttons-mood" id="confused-button">Confused</button>
-                <button class="buttons-mood" id="tired-button">Tired</button>
-
+                <div class="wrapper" id="buttons-area">
+                    <button class="buttons-mood" id="happy-button">Happy</button>
+                    <button class="buttons-mood" id="angry-button">Angry</button>
+                    <button class="buttons-mood" id="funny-button">Funny</button>
+                    <button class="buttons-mood" id="nervous-button">Nervous</button>
+                    <button class="buttons-mood" id="romantic-button">Romantic</button>
+                    <button class="buttons-mood" id="sad-button">Sad</button>
+                    <button class="buttons-mood" id="relax-button">Relax</button>
+                    <button class="buttons-mood" id="crazy-button">Crazy</button>
+                    <button class="buttons-mood" id="confused-button">Confused</button>
+                    <button class="buttons-mood" id="tired-button">Tired</button>
+                </div>
             
-                <form class="form-inline">
-                    <input id="mood-input" class="form-control mr-sm-2" type="search" placeholder="New Mood Search"
-                        aria-label="Search">
-                    <button id="submit-mood-button" class="btn btn-outline-light my-2 my-sm-4"
-                        type="submit">Submit</button>
-                </form>
+                <!-- <div class="form">
+                    <form class="form-inline">
+                        <input id="mood-input" class="form-control mr-sm-2" type="search" placeholder="New Mood Search"
+                            aria-label="Search">
+                        <button id="submit-mood-button" class="btn btn-outline-light my-2 my-sm-4"
+                            type="submit">Submit</button>
+                    </form> -->
                 </div>
             </div>
         </div>
         <br>
-        <div class="row">
+        <div class="row output-area">
 
             <!-- GIF LEFT COLUMN -->
             <div class="col-5" id="gif-area" style="background-color:rgb(245, 245, 245, 0.3);">
@@ -86,8 +88,35 @@
             </div>
         </div>
 
+
+        <button class="share-button" onclick="myFunction()">Share</button>
+        <div id="share-area">
+            <div class="col-12" style="background-color: whitesmoke;">
+                <h3>Send an Email</h3>
+                <form class="form-inline">
+                    <input id="sender-email" class="form-control mr-sm-2" type="email" placeholder="Sender's email"
+                        aria-label="sender's email">
+                    <input id="recipient-email" class="form-control mr-sm-2" type="email" placeholder="recipient's email"
+                        aria-label="recipient's email">
+
+                    <button id="send-email-button" class="btn btn-outline-success my-2 my-sm-4" type="submit">Send</button>
+                </form>
+
+                <form class="form-inline">
+                    <h3>Send a Text</h3>
+                    <input id="sender-name" class="form-control mr-sm-2" type="text" placeholder="Sender's Name"
+                        aria-label="sender's Name">
+                    <input id="recipient-phone" class="form-control mr-sm-2" type="tel" placeholder="recipient's phone number"
+                        aria-label="recipient's phone number">
+
+                    <button id="send-text-button" class="btn btn-outline-success my-2 my-sm-4" type="submit">Send</button>
+                </form>
+        </div>
+        </div>
+      
+
         <!-- SHARE AREA - SEND EMAIL -->
-        <div class="row" id="share-area">
+        <!-- <div class="row" id="share-area">
             <div class="col-11" style="background-color:#aaa;">Share area
                 <form class="form-inline">
                     <input id="sender-email" class="form-control mr-sm-2" type="search" placeholder="Sender's email"
@@ -98,7 +127,7 @@
                     <button id="send-email-button" class="btn btn-outline-success my-2 my-sm-4" type="submit">Send</button>
                 </form>
             </div>
-        </div>
+        </div> -->
 
     </div>
 

@@ -1,5 +1,5 @@
 body {
-    background: url(../images/papers.co-va21-smooth-rainbow-floor-pattern-8-wallpaper.jpg) no-repeat top center;
+    /* background: url(../images/papers.co-va21-smooth-rainbow-floor-pattern-8-wallpaper.jpg) no-repeat top center; */
     /* background: black; */
 }
 
@@ -40,14 +40,21 @@ nav.scroll {
 .container-fluid{
     margin-top: 140px;
 }
+.emblem{
+    margin-left: 240px;
+    margin-top: 180px;
+
+}
 button {
     margin: 10px;
+    padding: 15px;
     background-color: transparent;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
-    border-radius: 20px;
-    border-style: solid white 5px;
+    border-radius: 50px;
+    border-style: solid white 10px;
+    border
 }
 
 #submit-mood-button {
@@ -63,11 +70,14 @@ button {
 #buttons-area {
     margin-left: 80px;
     align-self: auto;
-    height: 120px;
+    /* height: 120px; */
     margin-top: 30px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
+.output-area{
+    margin-top: 200px;
 
+}
 #mood-input {
     height: 50px;
     width: 250px;

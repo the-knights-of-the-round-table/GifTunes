@@ -1,4 +1,9 @@
 // NAV BAR SCROLL EFFECT:
+$("#gif-area").hide();
+$("#music-area").hide();
+$("#share-area").hide();
+$(".share-button").hide();
+
 $(document).ready(function(){
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
@@ -40,7 +45,7 @@ makeButtons();
 function getGifs() {
     //When the user clicks  a button, the page should grab 5  animated gifs from the GIPHY API and place them on the page.
 
-    $('button').on('click', function() { 
+    $('.mood').on('click', function() { 
         var p = $(this).data('name');
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=Zr9700pOmpA44mJSPmhkDZFXmLkzWOk9&limit=5";
 
@@ -48,6 +53,9 @@ function getGifs() {
         .done(function(response) {
             var results = response.data;
             console.log(response);
+            $("#gif-area").show();
+            $("#music-area").show();
+            $(".share-button").show();
 
             //Create a loop to bring a rating and text into the div that holds the GIF
             for (var i=0; i < results.length; i++) {
@@ -71,3 +79,78 @@ function getGifs() {
             });
     });
 }
+
+// $(document).ready(function() {
+// //     var search = document.getElementById('mood-input');
+
+// // if(search) {
+// //     document.getElementById('mood-input').addEventListener('submit', function (e) {
+// //         e.preventDefault();
+// //         searchAlbums(document.getElementById('query').value);
+// //     }, false);
+// }
+
+var playlistId = "37i9dQZF1DXdPec7aLTmlC";
+// playlistId = moods[0];
+
+// var searchAlbums = function(playlistId) {
+//     // var playlistId = "37i9dQZF1DXdPec7aLTmlC";
+//     var accessToken = "BQAIb9nRF6B8vE6aJkwn5eP31EKnG7RzYrmWjSDnkm6cmOP37Hwoui8g2uSEpa0xo4UHN9C7nYfwfkf3b5p6qFPSTnjIMZxRNGR_xxqPI_Uyo06O8bQdB4uMxy_ZCIT34DxbpiuveadqFjSf8JG3Ig";
+    
+    
+//     $.ajax({
+//         method: "GET",
+//         url: `https://api.spotify.com/v1/playlists/${playlistId}`,
+//         headers: {
+//             'Authorization': 'Bearer ' + accessToken
+//         },
+//         success: function(response) {
+//             console.log(response);
+
+            
+//         }
+//     });
+// } 
+
+// $("#submit-mood-button").on("click", function () {
+    $("#happy-button").on("click", function () { 
+
+    var musicInput = $("#mood-input").val().trim();
+    console.log($("#mood-input"));
+    
+});
+
+$("#happy-button").on("click", function () {
+    // var accessToken = "BQAIb9nRF6B8vE6aJkwn5eP31EKnG7RzYrmWjSDnkm6cmOP37Hwoui8g2uSEpa0xo4UHN9C7nYfwfkf3b5p6qFPSTnjIMZxRNGR_xxqPI_Uyo06O8bQdB4uMxy_ZCIT34DxbpiuveadqFjSf8JG3Ig";
+    var accessToken = "BQDSloeBssw4LoCpmpY3XOCxyO02wZ1DJG0qTGNPCwkatxEb-gNsCMnIOu47s3nZ_fA9iqei7g1fdhY_wuOh3JxQGm4q1-ByQvDoGAw-wvKg6g1LDHA1LO1BECmj3A3t0iytLVxPDwEGdfSMqtrREA";
+    var queryURL = "https://api.spotify.com/v1/playlists/37i9dQZF1DXdPec7aLTmlC"; 
+
+    $.ajax({
+        method: "GET",
+        url: `https://api.spotify.com/v1/playlists/${playlistId}`,
+        headers: {
+            'Authorization': 'Bearer ' + accessToken
+        },
+        success: function(response) {
+            var results = response.tracks.items[0].track.name;
+            console.log(results);
+            console.log(response);
+            $("#music-area").html(results);
+        }
+    });
+    
+    
+
+});
+
+// SHARE YOUR GIF/TUNE AREA - EMAIL/TEXT
+function myFunction() {
+    var send = document.getElementById("share-area");
+    if (send.style.display === "none") {
+      send.style.display = "block";
+    } else {
+      send.style.display = "none";
+    }
+  }
+
+// });
