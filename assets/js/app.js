@@ -68,6 +68,7 @@ function getGifs() {
                 var giphyImg = $("<img>");
                 giphyImg.attr("class","img-responsive");
                 giphyImg.css({"width": "200px"});
+                giphyImg.css({"height": "100px;"});
                 giphyImg.attr("ID", "gif-style");
                 
                 giphyImg.attr("src", results[i].images.fixed_height_still.url);
