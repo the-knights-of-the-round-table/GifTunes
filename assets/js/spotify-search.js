@@ -3,7 +3,7 @@ var playlistId = "37i9dQZF1DXdPec7aLTmlC";
 
 $(document).on("click", "button", function () {
     console.log("You clicked me");
-    var accessToken = "BQCCsK3RyrCbuRqxSov9h4z1ILk8xPi_rYtg7QvOuAECSAc5xqaKuJf_fX9WS6iDEO0tLSMw7oKQg_ylyIuH6SllH8alWHvlTi8d6vC0fZoztfggTkWx8TF60ZlWQFe1ERlHc6xwUWmCc9KM";
+    var accessToken = "BQAugtcY6N0ZFUpTWHXR43sYUViXGWmgASldTiVgoEeW25S0k-sVvMBXumddhCllWfjOvwubXCwAmc2TnKzqoV_-KomUFMWOdFYI002oXCJ5adMz5Bg8KozbCVuSrA93tECvjWY1eBcLRGnC";
     var queryURL = "https://api.spotify.com/v1/playlists/37i9dQZF1DXdPec7aLTmlC"; 
 
     $.ajax({
