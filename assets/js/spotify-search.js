@@ -1,42 +1,9 @@
-// $(document).ready(function() {
-// //     var search = document.getElementById('mood-input');
-
-// // if(search) {
-// //     document.getElementById('mood-input').addEventListener('submit', function (e) {
-// //         e.preventDefault();
-// //         searchAlbums(document.getElementById('query').value);
-// //     }, false);
-// }
 
 var playlistId = "37i9dQZF1DXdPec7aLTmlC";
-// playlistId = moods[0];
-
-// var searchAlbums = function(playlistId) {
-//     // var playlistId = "37i9dQZF1DXdPec7aLTmlC";
-//     var accessToken = "BQAIb9nRF6B8vE6aJkwn5eP31EKnG7RzYrmWjSDnkm6cmOP37Hwoui8g2uSEpa0xo4UHN9C7nYfwfkf3b5p6qFPSTnjIMZxRNGR_xxqPI_Uyo06O8bQdB4uMxy_ZCIT34DxbpiuveadqFjSf8JG3Ig";
-    
-    
-//     $.ajax({
-//         method: "GET",
-//         url: `https://api.spotify.com/v1/playlists/${playlistId}`,
-//         headers: {
-//             'Authorization': 'Bearer ' + accessToken
-//         },
-//         success: function(response) {
-//             console.log(response);
-
-            
-//         }
-//     });
-// } 
-
-// $("#submit-mood-button").on("click", function () {
-
 
 $(document).on("click", "button", function () {
     console.log("You clicked me");
-    // var accessToken = "BQAIb9nRF6B8vE6aJkwn5eP31EKnG7RzYrmWjSDnkm6cmOP37Hwoui8g2uSEpa0xo4UHN9C7nYfwfkf3b5p6qFPSTnjIMZxRNGR_xxqPI_Uyo06O8bQdB4uMxy_ZCIT34DxbpiuveadqFjSf8JG3Ig";
-    var accessToken = "BQCiyO6rDTRDsp6-xfrxyU08c524OMF4qtBY0Z8lN2F8xJP_UG-PmNdsP90kJ_UpTGWEiVA8qKjm3aV4RHE4afoGzhib4JkDihQmFYGDB8moa4JuQT2UNTD1-ZltETjsaAfjJu9EEaPbLskm";
+    var accessToken = "BQCCsK3RyrCbuRqxSov9h4z1ILk8xPi_rYtg7QvOuAECSAc5xqaKuJf_fX9WS6iDEO0tLSMw7oKQg_ylyIuH6SllH8alWHvlTi8d6vC0fZoztfggTkWx8TF60ZlWQFe1ERlHc6xwUWmCc9KM";
     var queryURL = "https://api.spotify.com/v1/playlists/37i9dQZF1DXdPec7aLTmlC"; 
 
     $.ajax({
@@ -48,18 +15,12 @@ $(document).on("click", "button", function () {
         success: function(response) {
             console.log(response);
 
-            for (var i = 0; i <= 5; i++) {
+            var spotifyPlaylistID = response.id;
+            console.log("The spotify playlist ID is: " + spotifyPlaylistID);
+            var urlLink = response.external_urls.spotify;
+            console.log("URL link: " + urlLink);
 
-                var playlistTracks = response.tracks.items[i].track.name;
-                console.log(playlistTracks);
-               // var playlistDiv = $("music-area");
-               // playlistDiv.append(response.tracks.items[i].track.name);
-            }
-
-           /* var results = response.tracks.items[0].track.name;
-            console.log(results); */
-
-            $("#music-area").append(playlistTracks);
+            $("#music-area").append("<iframe src='https://open.spotify.com/embed/playlist/" + spotifyPlaylistID + "'" +  "width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
         }
     
 })});
