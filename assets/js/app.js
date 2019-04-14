@@ -1,9 +1,9 @@
-// NAV BAR SCROLL EFFECT:
 $("#gif-area").hide();
 $("#music-area").hide();
 $("#share-area").hide();
 $(".share-button").hide();
 
+// NAV BAR SCROLL EFFECT:
 $(document).ready(function(){
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
@@ -46,6 +46,7 @@ function getGifs() {
     //When the user clicks  a button, the page should grab 5  animated gifs from the GIPHY API and place them on the page.
 
     $('.mood').on('click', function() { 
+        $("#gif-row").empty();
         var p = $(this).data('name');
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=Zr9700pOmpA44mJSPmhkDZFXmLkzWOk9&limit=6";
 
@@ -161,4 +162,20 @@ function myFunction() {
     }
   }
 
+
+// SEND TEXT API AND SHENANIGANS:
+
+var accountSid = 'ACd119b33c22594f604f68d547a6239b9c';
+var authToken = '8a4e229119a830d767cc449b283388d8';
+var client = require('twilio')(accountSid, authToken);
+
+var userInputPhone = $("#recipient-phone").val().trim();
+
+client.messages
+  .create({
+     body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
+     from: '+3213206945',
+     to: '+15558675310'
+   })
+  .then(message => console.log(message.sid));
 // });

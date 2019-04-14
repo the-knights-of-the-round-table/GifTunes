@@ -1,9 +1,52 @@
 body {
-    /* background: url(../images/papers.co-va21-smooth-rainbow-floor-pattern-8-wallpaper.jpg) no-repeat top center; */
+    background: url(../images/giftunesbackground.jpg) no-repeat top center;
+    background-size: 100%;
     /* background: black; */
 }
+.header{
+    background-color: rgb(165, 129, 199);
+    height: 80px;
+    z-index: 1010;
+}
+h1{
+    font-size: 60px;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1010;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
 
-.logo {
+/* .logo {
     margin-left: 120px;
 }
 
@@ -15,7 +58,7 @@ nav {
     height: 100px;
     width: 100%;
     box-sizing: border-box;
-    color: white;
+    color: blueviolet;
 }
 
 nav.scroll {
@@ -31,7 +74,7 @@ nav.scroll {
 
 .nav-link {
     margin: 20px;
-    color: white !important;
+    color: blueviolet !important; */
 }
 
 .wrapper {
@@ -49,11 +92,11 @@ button {
     margin: 10px;
     padding: 15px;
     background-color: transparent;
-    color: white;
+    color: blueviolet;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 50px;
-    border-style: solid white 10px;
+    border-style: solid magenta 10px;
     border
 }
 
@@ -104,6 +147,7 @@ button {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
 
 footer {
     text-align: center;
