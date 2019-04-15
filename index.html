@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+<!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -75,6 +77,20 @@
                     <button class="buttons-mood" id="tired-button">Tired</button>
                 </div>
 
+ <!-- FAVORITE GIF SECTION  -->
+    <!-- <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+      
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ My favorites</button>  
+      </div> -->
+
+<!-- CREATE NEW MOOD BUTTONS -->
                 <!-- <div class="form">
                     <form class="form-inline">
                         <input id="mood-input" class="form-control mr-sm-2" type="search" placeholder="New Mood Search"
@@ -82,11 +98,12 @@
                         <button id="submit-mood-button" class="btn btn-outline-light my-2 my-sm-4"
                             type="submit">Submit</button>
                     </form> -->
-            </div>
+            <!-- </div> -->
+        
         </div>
     </div>
-    <div class="row output-area">
 
+    <div class="row output-area">
         <!-- GIF LEFT COLUMN -->
         <div class="col-5" class id="gif-area" style="background-color:rgb(245, 245, 245, 0.3);">
 
@@ -99,7 +116,8 @@
         <div class="col-5" id="music-area" style="background-color:rgb(245, 245, 245, 0.3);">
         </div>
     </div>
-            
+          <!-- SHARE -->
+    <div id="sharing">
     <button class="share-button" onclick="myFunction()">Share</button>
     <div id="share-area">
         <div class="col-12" style="background-color: whitesmoke;">
@@ -123,6 +141,7 @@
                 <button id="send-text-button" class="btn btn-outline-success my-2 my-sm-4" type="submit">Send</button>
             </form>
         </div>
+    </div>
     </div>
 
 
@@ -151,7 +170,12 @@
 
     <!-- JS link -->
     <script src="assets/js/app.js"></script>
-    <!-- <script src="assets/js/spotify-search.js"></script> -->
+    <!-- <script src="assets/js/spotify account.js"></script> -->
+
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+
 </body>
 
 </html>

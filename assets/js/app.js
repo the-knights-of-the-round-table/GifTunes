@@ -1,3 +1,5 @@
+$(document).ready(function() { 
+
 $("#gif-area").hide();
 $("#music-area").hide();
 $("#share-area").hide();
@@ -57,11 +59,18 @@ makeButtons();
                 giphyImg.attr("src", results[i].images.fixed_height_still.url);
                 giphyImg.attr("data-animate", results[i].images.fixed_height.url);
 
+// ADDING  A HEART FONT AWESOME FOR FAVORITES:
+                var heartSpan = $("<i>");
+                heartSpan.addClass("far fa-heart");
+                heartSpan.attr("span-image", giphyImg);
+
                 gifDiv.append(giphyImg)
+                gifDiv.append(gifDivBody);
+                gifDivBody.append(heartSpan);
                 // gifDiv.append(p)
 
                 $("#gif-row").prepend(gifDiv);
-            }
+            };
 
 // SPOTIFY TOKEN:
             var settings = {
@@ -105,7 +114,7 @@ makeButtons();
                     console.log(index + ": " + track.id);
 
 // SPOTIFY WIDGET DISPLAY:
-                    $("#music-area").append("<iframe src='https://open.spotify.com/embed/track/" + track.id + "' width='195' height='220' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
+                    $("#music-area").append("<iframe src='https://open.spotify.com/embed/track/" + track.id + "' width='195' height='250' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
                     })
             });
         })
@@ -132,30 +141,68 @@ $("#happy-button").on("click", function () {
 });
 });
 
-// SHARE YOUR GIF/TUNE AREA - EMAIL/TEXT - this code used to work!
+
+//   // Initialize Firebase
+//   var config = {
+//     apiKey: "AIzaSyADHvw-3oLDWIuFwEFmjFEg-pzmZvVNCx8",
+//     authDomain: "giftunes-project1.firebaseapp.com",
+//     databaseURL: "https://giftunes-project1.firebaseio.com",
+//     projectId: "giftunes-project1",
+//     storageBucket: "giftunes-project1.appspot.com",
+//     messagingSenderId: "949281859431"
+//   };
+//   firebase.initializeApp(config);
+
+//   var dataRef = firebase.database();
+
+  
+// FAVORITE GIF SIDE BAR - not working at the moment:
+//   function openNav() {
+//     document.getElementById("mySidebar").style.width = "250px";
+//     document.getElementById("main").style.marginLeft = "250px";
+//   }
+  
+//   function closeNav() {
+//     document.getElementById("mySidebar").style.width = "0";
+//     document.getElementById("main").style.marginLeft= "0";
+//   };
+
+
+// SHARE YOUR GIF/TUNE AREA - EMAIL/TEXT - this code used to work not anymore for now!
 function myFunction() {
+    $("#share-button").on("click", function () {
+        console.log("is working");
+    $("#share-area").css({"visibility": "visible"});
     var share = document.getElementById("share-area");
     if (share.style.display === "none") {
         share.style.display = "block";
     } else {
         share.style.display = "none";
     }
-  }
+});
+  };
 
+myFunction();
 
 // SEND TEXT API AND SHENANIGANS:
 
-var accountSid = 'ACd119b33c22594f604f68d547a6239b9c';
-var authToken = '8a4e229119a830d767cc449b283388d8';
-var client = require('twilio')(accountSid, authToken);
+// var accountSid = 'ACd119b33c22594f604f68d547a6239b9c';
+// var authToken = '8a4e229119a830d767cc449b283388d8';
+// var client = require('twilio')(accountSid, authToken);
 
-var userInputPhone = $("#recipient-phone").val().trim();
+// var userInputPhone = $("#recipient-phone").val().trim();
 
-client.messages
-  .create({
-     body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
-     from: '+3213206945',
-     to: '+15558675310'
-   })
-  .then(message => console.log(message.sid));
-});
+// client.messages
+//   .create({
+//      body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
+//      from: '+3213206945',
+//      to: '+15558675310'
+//    })
+//   .then(message => console.log(message.sid));
+// });
+
+
+
+
+
+})})
