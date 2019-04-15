@@ -1,41 +1,146 @@
-body{
-    background: url(../images/papers.co-va21-smooth-rainbow-floor-pattern-8-wallpaper.jpg) no-repeat top center;
+body {
+    background: url(../images/giftunesbackground.jpg) no-repeat center fixed;
+    background-size: 100%;
+    background-size: cover;
 }
-.logo{
-    margin-left: 120px;
+.header{
+    background-color: rgb(165, 129, 199);
+    height: 160px;
+    z-index: 1010;
+    padding: 10px;
 }
-.navbar{
-    background-color: white;
+
+h1{
+    font-size: 60px;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1010;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+
+.logo {
+    display: block;
+    box-align: center;
+    /* margin: 10px; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 80px;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; 
+    transition: width 2s, height 2s, transform 2s;
+}
+.logo:hover {
+    width: 160px;
+    height: 130px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(360deg);
+  }
+/* 
+nav {
+    position: fixed !important;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    color: blueviolet;
+}
+nav.scroll {
+    background-color: black;
+    color: #eef;
+    z-index: 1010;
+  }
 #navbarDropdownMenuLink {
     margin-right: 150px;
 }
-
-.nav-link{
+.nav-link {
     margin: 20px;
-}
+    color: blueviolet !important; */
+/* } */
+
 .wrapper {
     text-align: center;
 }
-button{
-    /* margin: 10px; */
+.container-fluid{
+    margin-top: 20px;
+}
+.emblem{
+    margin-left: 240px;
+    margin-top: 180px;
+
+}
+button {
+    margin: 10px;
+    padding: 15px;
     background-color: transparent;
-    color: white;
+    color: blueviolet;
     text-transform: uppercase;
     font-weight: bold;
-    padding: 15px;
-    border-radius: 20px;
-    border-style: solid white;
-    /* margin-inline-start: 100px;
-    margin-inline-end: 80px;
-    margin-top: 20px; */
+    border-radius: 50px;
+    border-style: solid magenta 10px;
 }
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+/* #submit-mood-button {
+    background-color: transparent;
+    color: white !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: solid white 3px;
+} */
+
 #buttons-area {
     margin-left: 80px;
     align-self: auto;
-    height: 80px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    /* height: 120px; */
+    /* margin-top: 10px; */
+    /* margin-bottom: 30px; */
+}
+.output-area{
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+#mood-input {
+    height: 50px;
+    width: 250px;
+    border-radius: 20px;
+    margin-left: 480px;
 }
 
 #gif-area {
@@ -43,12 +148,30 @@ button{
     height: 480px;
     margin-bottom: 20px;
 }
-#music-area{
+
+.far {
+    /* padding: 8px 12px 12px;;
+    margin-left: 2px;      */
+    box-align: center;
+}
+
+#music-area {
     height: 480px;
     margin-left: 38px;
     margin-bottom: 20px;
 }
 
+iframe{
+  margin-top: 8px;
+}
+
+.card-body{
+  height: 5px;
+}
+#sharing{
+  margin-block-start: 20px;
+  z-index: 1010;
+}
 #share-area {
     margin-left: 80px;
     align-self: auto;
@@ -57,9 +180,63 @@ button{
     margin-bottom: 30px;
 }
 
-footer{
-    text-align: center;
-    padding: 20px;  
+/* THIS IS FAVORITE SIDE BAR: */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+/* ^ END OF THE FAVORITER SIDE BAR ^ */
+
+footer {
+    text-align: center !important;
+    padding: 20px;
     width: auto;
     bottom: 0;
     position: relative;

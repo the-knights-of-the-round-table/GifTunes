@@ -14,49 +14,39 @@
 
     <title>GifTunes</title>
 </head>
-<body>
-     <!-- NAVBAR -->
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">GIFtunes</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">About</a>
-                    </li>   
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Themes
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">RED</a>
-                            <a class="dropdown-item" href="#">BLUE</a>
-                            <a class="dropdown-item" href="#">GREEN</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+<body background= "assets/images/index2-background.jpg" width= "30%" no-repeat center;>
 
-       
-
-     <!-- SHARE AREA - SEND EMAIL -->
-     <div class="row" id="share-area">
-            <div class="col-11" style="background-color:#aaa;">Share area
-                <form class="form-inline">
-                    <input id="sender-email" class="form-control mr-sm-2" type="search" placeholder="Sender's email"
-                        aria-label="sender's email">
-                    <input id="recipient-email" class="form-control mr-sm-2" type="search" placeholder="recipient's email"
-                        aria-label="recipient's email">
-
-                    <button id="send-email-button" class="btn btn-outline-success my-2 my-sm-4" type="submit">Send</button>
-                </form>
-            </div>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg" id="interactive-navbar">
+            <img class="logo" src="assets/images/giftunes.png" alt="Giftunes" width="8%">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>   
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Themes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <ul>
+                            <li><a class="dropdown-item" href="#">RED</a></li>
+                            <li><a class="dropdown-item" href="#">BLUE</a></li>
+                            <li><a class="dropdown-item" href="#">GREEN</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
+    </nav>
+
+
+    <!-- <img class="factions" src="./assets/images/index2-background.jpg"  > -->
 
 
 
