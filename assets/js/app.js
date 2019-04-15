@@ -84,7 +84,6 @@ makeButtons();
             }
             
             $.ajax(settings).done(function (response) {
-                
                 console.log("Ajax Ajax Ajax");
                 console.log(response);
                 console.log(response.access_token);
@@ -120,6 +119,8 @@ $(document).on("click", "#gif-style", function (event) {
     console.log($(this));
     console.log("--------- THIS ---------")
 });
+// $("#submit-mood-button").on("click", function () {
+// $("#happy-button").on("click", function () {
 
 
 $("#submit-mood-button").on("click", function () {
