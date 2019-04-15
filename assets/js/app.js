@@ -72,7 +72,7 @@ makeButtons();
                 giphyImg.attr("id", "gif-style");
                 giphyImg.attr("mood", p);
 
-                giphyImg.attr("src", results[i].images.fixed_height_still.url);
+                giphyImg.attr("src", results[i].images.fixed_height.url);
                 giphyImg.attr("data-animate", results[i].images.fixed_height.url);
 
                 gifDiv.append(giphyImg)
@@ -107,7 +107,7 @@ makeButtons();
                 console.log(response.access_token);
 
                 var tempMood = p;
-                var trackSearchUrl = "https://api.spotify.com/v1/search/?type=track&limit=5&q=" + tempMood + "&access_token=" + response.access_token;
+                var trackSearchUrl = "https://api.spotify.com/v1/search/?type=track&limit=3&q=" + tempMood + "&access_token=" + response.access_token;
                /* var moodSearchUrl = "https://api.spotify.com/v1/search/?type=playlist&limit=1&q=" + tempMood + "&access_token=" + response.access_token; */
 
 
