@@ -3,35 +3,27 @@ $("#music-area").hide();
 $("#share-area").hide();
 $(".share-button").hide();
 
-<<<<<<< HEAD
-// NAV BAR SCROLL EFFECT:
-$(document).ready(function(){
-    $(window).scroll(function(){
-=======
-$(document).ready(function () {
-    $(window).scroll(function () {
->>>>>>> 09ffe2f613b457b98760577107aaf95a6f6bb600
-        var scroll = $(window).scrollTop();
-        if (scroll > 10) {
-            $("#interactive-navbar").css("background", "black");
-        }
+// // NAV BAR SCROLL EFFECT:
+// $(document).ready(function(){
+//     $(window).scroll(function(){
+//         var scroll = $(window).scrollTop();
+//         if (scroll > 10) {
+//             $("#interactive-navbar").css("background", "black");
+//         }
 
-        else {
-            $(".black").css("background", "transparent");
-        }
-    })
-})
-
-//Create an array of strings, this will be our var=moods.
+//         else {
+//             $(".black").css("background", "transparent");
+//         }
+//     })
+// })
 
 var moods = ["happy", "angry", "funny", "nervous", "romantic", "sad", "relax", "crazy", "confused", "tired"];
 console.log(moods);
 
-
 //Take the moods in this array and create buttons in the HTML.
 
 function makeButtons() {
-    $("#buttons-area").empty(); //Use a  loop that appends a button for *each string* (by index) in the array.
+    $("#buttons-area").empty(); 
     for (var i = 0; i < moods.length; i++) {
 
         var button = $("<button>");
@@ -41,23 +33,14 @@ function makeButtons() {
         $("#buttons-area").append(button);
     }
 }
-
-//Make dem buttons!
-
 makeButtons();
 
-//When the user clicks  a button, the page should grab 5  animated gifs from the GIPHY API and place them on the page.
-
-<<<<<<< HEAD
-    $('.mood').on('click', function() { 
-        $("#gif-row").empty();
-        var p = $(this).data('name');
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=Zr9700pOmpA44mJSPmhkDZFXmLkzWOk9&limit=6";
-=======
 $('.mood').on('click', function () {
+    $("#gif-row").empty();
+    $("#music-area").empty();
+
     var p = $(this).data('name');
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=Zr9700pOmpA44mJSPmhkDZFXmLkzWOk9&limit=6";
->>>>>>> 09ffe2f613b457b98760577107aaf95a6f6bb600
 
     $.ajax({ url: queryURL, method: 'GET' })
         .done(function (response) {
@@ -67,10 +50,9 @@ $('.mood').on('click', function () {
             $("#music-area").show();
             $(".share-button").show();
 
-            //Create a loop to bring a rating and text into the div that holds the GIF
             for (var i = 0; i < results.length; i++) {
 
-                var gifDiv = $('<div class="item">'); //don't understand why this works but doesn't with ""
+                var gifDiv = $('<div class="item">'); 
                 gifDiv.addClass("card btn-space mx-auto");
                 gifDiv.attr("style", "margin:6px");
                 var gifDivBody = $("<div>");
@@ -110,15 +92,12 @@ $('.mood').on('click', function () {
             }
         
             $.ajax(settings).done(function (response) {
-                
                 console.log("Ajax Ajax Ajax");
-                
                 console.log(response);
                 console.log(response.access_token);
 
                 var tempMood = p;
                 var moodSearchUrl = "https://api.spotify.com/v1/search/?type=playlist&limit=1&q=" + tempMood + "&access_token=" + response.access_token;
-
 
                 $.ajax({
                     method: "GET",
@@ -131,14 +110,8 @@ $('.mood').on('click', function () {
                     response.playlists.items.forEach((playlist, index) => {
                         console.log(index + ": " + playlist.id);
 
-                        $("#music-area").append("<iframe src='https://open.spotify.com/embed/playlist/" + playlist.id + "' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
-                        
+                        $("#music-area").append("<iframe src='https://open.spotify.com/embed/playlist/" + playlist.id + "' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");   
                     })
-
-
-                
-
-
             });
         })
 })
@@ -172,31 +145,23 @@ $(document).on("click", "#gif-style", function (event) {
 
     $.ajax(settings).done(function (response) {
         console.log(this);
-        
         console.log("Ajax Ajax Ajax");
-        
         console.log(response);
     });
 
 });
+// $("#submit-mood-button").on("click", function () {
+// $("#happy-button").on("click", function () {
 
-// $(document).ready(function() {
-// //     var search = document.getElementById('mood-input');
+//     var musicInput = $("#mood-input").val().trim();
+//     console.log($("#mood-input"));
 
-// // if(search) {
-// //     document.getElementById('mood-input').addEventListener('submit', function (e) {
-// //         e.preventDefault();
-// //         searchAlbums(document.getElementById('query').value);
-// //     }, false);
-// }
+// });
 
-var playlistId = "37i9dQZF1DXdPec7aLTmlC";
-// playlistId = moods[0];
-
-// var searchAlbums = function(playlistId) {
-//     // var playlistId = "37i9dQZF1DXdPec7aLTmlC";
-//     var accessToken = "BQAIb9nRF6B8vE6aJkwn5eP31EKnG7RzYrmWjSDnkm6cmOP37Hwoui8g2uSEpa0xo4UHN9C7nYfwfkf3b5p6qFPSTnjIMZxRNGR_xxqPI_Uyo06O8bQdB4uMxy_ZCIT34DxbpiuveadqFjSf8JG3Ig";
-
+// $("#happy-button").on("click", function () {
+//     // var accessToken = "BQAIb9nRF6B8vE6aJkwn5eP31EKnG7RzYrmWjSDnkm6cmOP37Hwoui8g2uSEpa0xo4UHN9C7nYfwfkf3b5p6qFPSTnjIMZxRNGR_xxqPI_Uyo06O8bQdB4uMxy_ZCIT34DxbpiuveadqFjSf8JG3Ig";
+//     var accessToken = "BQDSloeBssw4LoCpmpY3XOCxyO02wZ1DJG0qTGNPCwkatxEb-gNsCMnIOu47s3nZ_fA9iqei7g1fdhY_wuOh3JxQGm4q1-ByQvDoGAw-wvKg6g1LDHA1LO1BECmj3A3t0iytLVxPDwEGdfSMqtrREA";
+//     var queryURL = "https://api.spotify.com/v1/playlists/37i9dQZF1DXdPec7aLTmlC";
 
 //     $.ajax({
 //         method: "GET",
@@ -204,73 +169,23 @@ var playlistId = "37i9dQZF1DXdPec7aLTmlC";
 //         headers: {
 //             'Authorization': 'Bearer ' + accessToken
 //         },
-//         success: function(response) {
+//         success: function (response) {
+//             var results = response.tracks.items[0].track.name;
+//             console.log(results);
 //             console.log(response);
-
-
+//             $("#music-area").html(results);
 //         }
 //     });
-// } 
-
-// $("#submit-mood-button").on("click", function () {
-$("#happy-button").on("click", function () {
-
-    var musicInput = $("#mood-input").val().trim();
-    console.log($("#mood-input"));
-
-});
-
-$("#happy-button").on("click", function () {
-    // var accessToken = "BQAIb9nRF6B8vE6aJkwn5eP31EKnG7RzYrmWjSDnkm6cmOP37Hwoui8g2uSEpa0xo4UHN9C7nYfwfkf3b5p6qFPSTnjIMZxRNGR_xxqPI_Uyo06O8bQdB4uMxy_ZCIT34DxbpiuveadqFjSf8JG3Ig";
-    var accessToken = "BQDSloeBssw4LoCpmpY3XOCxyO02wZ1DJG0qTGNPCwkatxEb-gNsCMnIOu47s3nZ_fA9iqei7g1fdhY_wuOh3JxQGm4q1-ByQvDoGAw-wvKg6g1LDHA1LO1BECmj3A3t0iytLVxPDwEGdfSMqtrREA";
-    var queryURL = "https://api.spotify.com/v1/playlists/37i9dQZF1DXdPec7aLTmlC";
-
-    $.ajax({
-        method: "GET",
-        url: `https://api.spotify.com/v1/playlists/${playlistId}`,
-        headers: {
-            'Authorization': 'Bearer ' + accessToken
-        },
-        success: function (response) {
-            var results = response.tracks.items[0].track.name;
-            console.log(results);
-            console.log(response);
-            $("#music-area").html(results);
-        }
-    });
-
-
-
-});
+// });
 
 // SHARE YOUR GIF/TUNE AREA - EMAIL/TEXT - this code works!
 function myFunction() {
-    var send = document.getElementById("share-area");
-    if (send.style.display === "none") {
-        send.style.display = "block";
+    $("#share-area").show;
+    var share = document.getElementById("share-area");
+    if (share.style.display === "none") {
+        share.style.display = "block";
     } else {
-        send.style.display = "none";
+        share.style.display = "none";
     }
-<<<<<<< HEAD
   }
-
-
-// SEND TEXT API AND SHENANIGANS:
-
-var accountSid = 'ACd119b33c22594f604f68d547a6239b9c';
-var authToken = '8a4e229119a830d767cc449b283388d8';
-var client = require('twilio')(accountSid, authToken);
-
-var userInputPhone = $("#recipient-phone").val().trim();
-
-client.messages
-  .create({
-     body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
-     from: '+3213206945',
-     to: '+15558675310'
-   })
-  .then(message => console.log(message.sid));
-// });
-=======
-    }})
->>>>>>> 09ffe2f613b457b98760577107aaf95a6f6bb600
+})
