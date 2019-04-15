@@ -8,7 +8,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- CSS  -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -16,18 +16,18 @@
     <title>GifTunes</title>
 </head>
 
-<body background= "assets/images/giftunesbackground.jpg">
+<body background="assets/images/giftunesbackground.jpg">
     <div class="header">
-            <!-- <h1>GifTunes</h1> -->
-            <img class="logo" src="assets/images/giftunes.png" alt="Giftunes" width="8%">
-            <p></p>
-          </div>
-          
-          <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        <!-- <h1>GifTunes</h1> -->
+        <img class="logo" src="assets/images/giftunes.png" alt="Giftunes" width="8%">
+        <p></p>
+    </div>
+
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
     <!-- NAVBAR -->
     <!-- <nav class="navbar navbar-expand-lg" id="interactive-navbar">
@@ -57,7 +57,7 @@
             </ul>
         </div>
     </nav> -->
-    
+
     <!-- MOOD BUTTON AREA-->
     <div class="container-fluid">
         <div class="row">
@@ -74,7 +74,7 @@
                     <button class="buttons-mood" id="confused-button">Confused</button>
                     <button class="buttons-mood" id="tired-button">Tired</button>
                 </div>
-            
+
                 <!-- <div class="form">
                     <form class="form-inline">
                         <input id="mood-input" class="form-control mr-sm-2" type="search" placeholder="New Mood Search"
@@ -82,57 +82,57 @@
                         <button id="submit-mood-button" class="btn btn-outline-light my-2 my-sm-4"
                             type="submit">Submit</button>
                     </form> -->
-                </div>
             </div>
         </div>
-        <div class="row output-area">
+    </div>
+    <div class="row output-area">
 
-            <!-- GIF LEFT COLUMN -->
-            <div class="col-5" class id="gif-area" style="background-color:rgb(245, 245, 245, 0.3);">
-                <h2>Gif area</h2>
-                <div class="row" id="gif-row"></div>
-                <div class="row" id="gif-row"></div>
-                <div class="row" id="gif-row"></div>
+        <!-- GIF LEFT COLUMN -->
+        <div class="col-5" class id="gif-area" style="background-color:rgb(245, 245, 245, 0.3);">
+
+            <div class="row" id="gif-row"></div>
+            <div class="row" id="gif-row"></div>
+            <div class="row" id="gif-row"></div>
+        </div>
+
+        <!-- MUSIC RIGHT COLUMN -->
+        <div class="col-5" id="music-area" style="background-color:rgb(245, 245, 245, 0.3);">
+        </div>
+    </div>
+
+    <button onclick="myFunction()">Try it</button>
+    <div id="myDIV">
+            This is my DIV element.
             </div>
+            
+    <button class="share-button" onclick="myFunction()">Share</button>
+    <div id="share-area">
+        <div class="col-12" style="background-color: whitesmoke;">
+            <h3>Send an Email</h3>
+            <form class="form-inline">
+                <input id="sender-email" class="form-control mr-sm-2" type="email" placeholder="Sender's email"
+                    aria-label="sender's email">
+                <input id="recipient-email" class="form-control mr-sm-2" type="email" placeholder="recipient's email"
+                    aria-label="recipient's email">
 
-            <!-- MUSIC RIGHT COLUMN -->
-            <div class="col-5" id="music-area" style="background-color:rgb(245, 245, 245, 0.3);">
-                <h2>Music area</h2>
-                <div class="row" id="music-row"></div>
-                <div class="row" id="music-row"></div>
-                <div class="row" id="music-row"></div>
-            </div>
+                <button id="send-email-button" class="btn btn-outline-success my-2 my-sm-4" type="submit">Send</button>
+            </form>
+
+            <form class="form-inline">
+                <h3>Send a Text</h3>
+                <input id="sender-name" class="form-control mr-sm-2" type="text" placeholder="Sender's Name"
+                    aria-label="sender's Name">
+                <input id="recipient-phone" class="form-control mr-sm-2" type="tel"
+                    placeholder="recipient's phone number" aria-label="recipient's phone number">
+
+                <button id="send-text-button" class="btn btn-outline-success my-2 my-sm-4" type="submit">Send</button>
+            </form>
         </div>
+    </div>
 
 
-        <button class="share-button" onclick="myFunction()">Share</button>
-        <div id="share-area">
-            <div class="col-12" style="background-color: whitesmoke;">
-                <h3>Send an Email</h3>
-                <form class="form-inline">
-                    <input id="sender-email" class="form-control mr-sm-2" type="email" placeholder="Sender's email"
-                        aria-label="sender's email">
-                    <input id="recipient-email" class="form-control mr-sm-2" type="email" placeholder="recipient's email"
-                        aria-label="recipient's email">
-
-                    <button id="send-email-button" class="btn btn-outline-success my-2 my-sm-4" type="submit">Send</button>
-                </form>
-
-                <form class="form-inline">
-                    <h3>Send a Text</h3>
-                    <input id="sender-name" class="form-control mr-sm-2" type="text" placeholder="Sender's Name"
-                        aria-label="sender's Name">
-                    <input id="recipient-phone" class="form-control mr-sm-2" type="tel" placeholder="recipient's phone number"
-                        aria-label="recipient's phone number">
-
-                    <button id="send-text-button" class="btn btn-outline-success my-2 my-sm-4" type="submit">Send</button>
-                </form>
-        </div>
-        </div>
-      
-
-        <!-- SHARE AREA - SEND EMAIL -->
-        <!-- <div class="row" id="share-area">
+    <!-- SHARE AREA - SEND EMAIL -->
+    <!-- <div class="row" id="share-area">
             <div class="col-11" style="background-color:#aaa;">Share area
                 <form class="form-inline">
                     <input id="sender-email" class="form-control mr-sm-2" type="search" placeholder="Sender's email"
@@ -146,8 +146,8 @@
 
     </div>
 
-<!-- FOOTER -->
-<footer id="footer"> Copyright&copy; 2019 Knights of the Round Table </footer>
+    <!-- FOOTER -->
+    <footer id="footer"> Copyright&copy; 2019 Knights of the Round Table </footer>
 
 
     <!-- JQuery link -->
