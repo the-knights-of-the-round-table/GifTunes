@@ -66,7 +66,7 @@ $(document).ready(function() {
         giphyImg.attr("id", "gif-style");
         giphyImg.attr("mood", p);
 
-        giphyImg.attr("src", results[i].images.fixed_height_still.url);
+        giphyImg.attr("src", results[i].images.fixed_height.url);
         giphyImg.attr("data-animate", results[i].images.fixed_height.url);
 
         // ADDING  A HEART FONT AWESOME FOR FAVORITES:
