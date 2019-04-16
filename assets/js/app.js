@@ -118,7 +118,7 @@ makeButtons();
                     console.log(index + ": " + track.id);
 
 // SPOTIFY WIDGET DISPLAY:
-                    $("#music-area").append("<iframe src='https://open.spotify.com/embed/track/" + track.id + "' width='195' height='250' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
+                    $("#music-area").append("<span class='spotify-song' style='z-index:1010'><iframe src='https://open.spotify.com/embed/track/" + track.id + "' width='195' height='250' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe></span>");
                     })
             });
         })
