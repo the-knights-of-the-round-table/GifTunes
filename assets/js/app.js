@@ -11,12 +11,11 @@ console.log(moods);
 function makeButtons() {
     $("#buttons-area").empty();  
     for (var i = 0; i < moods.length; i++) {
-
-        var button = $("<button>");
-        button.addClass("mood");
-        button.attr("data-name", moods[i]);
-        button.text(moods[i]);
-        $("#buttons-area").append(button);
+      var button = $("<button>");
+      button.addClass("mood");
+      button.attr("data-name", moods[i]);
+      button.text(moods[i]);
+      $("#buttons-area").append(button);
     }
 }
 
@@ -146,21 +145,9 @@ $(".item").children("img").on("click", function () {
 $(document).on("click", "#gif-style", function (event) {
     console.log("--------- THIS ---------")
     console.log($(this));
-    console.log("--------- THIS ---------")
-});
-// $("#submit-mood-button").on("click", function () {
-// $("#happy-button").on("click", function () {
-
-
-$("#submit-mood-button").on("click", function () {
-$("#happy-button").on("click", function () {
-
-    var musicInput = $("#mood-input").val().trim();
-    console.log($("#mood-input"));
-
-});
-});
-
+    
+    alert($(this).attr("data-id"))
+})
 
 //   // Initialize Firebase
 //   var config = {
@@ -217,7 +204,11 @@ $("#happy-button").on("click", function () {
 //   .then(message => console.log(message.sid));
 // });
 
+    // var accountSid = 'ACd119b33c22594f604f68d547a6239b9c';
+    // var authToken = '8a4e229119a830d767cc449b283388d8';
+    // var client = require('twilio')(accountSid, authToken);
 
+    // var userInputPhone = $("#recipient-phone").val().trim();
 
 
 })})
