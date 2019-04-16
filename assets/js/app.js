@@ -51,13 +51,17 @@ makeButtons();
                 gifDivBody.addClass("card-body");
                 var giphyImg = $("<img>");
                 giphyImg.attr("class", "img-responsive");
-                giphyImg.css({ "width": "200px" });
-                giphyImg.css({ "height": "100px;" });
+                giphyImg.css({ "width": "180px"});
+                // giphyImg.css({ "height": "80px;" });
                 giphyImg.attr("id", "gif-style");
                 giphyImg.attr("mood", p);
 
                 giphyImg.attr("src", results[i].images.fixed_height.url);
                 giphyImg.attr("data-animate", results[i].images.fixed_height.url);
+// Adding a bullet button
+                giphyImg.attr('<label class="radio-inline"></label>');
+                giphyImg.attr('<input type = "radio" name="optradio"');
+
 
 // ADDING  A HEART FONT AWESOME FOR FAVORITES:
                 var heartSpan = $("<i>");
@@ -119,6 +123,22 @@ makeButtons();
             });
         })
 })
+// function bullets() {
+//     for (i = 0; i < allQuestions.length; i++) {
+//         if ($("input[name='inlineRadioOptions" + i + "']:checked").parent().text() === allQuestions[i].answer) {
+//             correct++;
+//         }
+//         else if ($("input[name='inlineRadioOptions" + i + "']:checked").parent().text().length === 0) {
+//             unanswered++;
+//         }
+//         else {
+//             incorrect++;
+//         }
+//         ;
+//     }
+//     ;
+// }
+
 $(".item").children("img").on("click", function () {
     var state = $(this).attr("data-state")
 });
