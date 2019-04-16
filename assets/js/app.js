@@ -2,8 +2,8 @@ $(document).ready(function() {
 
 $("#gif-area").hide();
 $("#music-area").hide();
-$("#share-area").hide();
-$(".share-button").hide();
+// $("#share-area").hide();
+// $(".share-button").hide();
 
 var moods = ["happy", "angry", "funny", "nervous", "romantic", "sad", "relax", "crazy", "confused", "tired"];
 console.log(moods);
@@ -56,7 +56,7 @@ makeButtons();
                 giphyImg.attr("id", "gif-style");
                 giphyImg.attr("mood", p);
 
-                giphyImg.attr("src", results[i].images.fixed_height_still.url);
+                giphyImg.attr("src", results[i].images.fixed_height.url);
                 giphyImg.attr("data-animate", results[i].images.fixed_height.url);
 
 // ADDING  A HEART FONT AWESOME FOR FAVORITES:
@@ -169,33 +169,29 @@ $("#happy-button").on("click", function () {
 
 
 // SHARE YOUR GIF/TUNE AREA - EMAIL/TEXT - this code used to work not anymore for now!
-function myFunction() {
-    $("#share-button").on("click", function () {
-        console.log("is working");
-    $("#share-area").css({"visibility": "visible"});
-    var share = document.getElementById("share-area");
-    if (share.style.display === "none") {
-        share.style.display = "block";
-    } else {
-        share.style.display = "none";
-    }
-});
-  };
+// function myFunction() {
+//     $("#share-button").on("click", function () {
+//         console.log("is working");
+//     $("#share-area").css({"visibility": "visible"});
+//     var share = document.getElementById("share-area");
+//     if (share.style.display === "none") {
+//         share.style.display = "block";
+//     } else {
+//         share.style.display = "none";
+//     }
+// });
+//   };
 
-myFunction();
+// myFunction();
 
 // SEND TEXT API AND SHENANIGANS:
 
-// var accountSid = 'ACd119b33c22594f604f68d547a6239b9c';
-// var authToken = '8a4e229119a830d767cc449b283388d8';
-// var client = require('twilio')(accountSid, authToken);
-
-// var userInputPhone = $("#recipient-phone").val().trim();
+// var trackSearchUrl = "https://api.spotify.com/v1/search/?type=tracklimit=6&q=" + tempMood + "&access_token=" + response.access_token;
 
 // client.messages
 //   .create({
 //      body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
-//      from: '+3213206945',
+//      from: '+13213209189',
 //      to: '+15558675310'
 //    })
 //   .then(message => console.log(message.sid));
@@ -204,5 +200,38 @@ myFunction();
 
 
 
-
 })})
+
+$('#send-text-button').on('click', function(event) { 
+    event.preventDefault();
+    var accountSid = 'ACc5c2b1a6bc513aa2ea9ecda481d9d442';
+    var authToken = 'c61a1a2d3727e733974bd3bf1d2a64f3';
+    // var client = require('twilio')(accountSid, authToken);
+    var senderName = $("#sender-name").val().trim();
+    var userInputPhone = $("#recipient-phone").val().trim();
+    var senderPhoneNumber= '+13213209189';
+    var body= $("#message").val().trim();
+
+    var sendText = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://api.twilio.com/2010-04-01/Accounts/ACc5c2b1a6bc513aa2ea9ecda481d9d442/Messages.json?authToken=c61a1a2d3727e733974bd3bf1d2a64f3",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Authorization": "Basic QUNjNWMyYjFhNmJjNTEzYWEyZWE5ZWNkYTQ4MWQ5ZDQ0MjpjNjFhMWEyZDM3MjdlNzMzOTc0YmQzYmYxZDJhNjRmMw==",
+          "cache-control": "no-cache",
+          "Postman-Token": "193420b8-f8a3-4255-8a7b-0c976411ec27"
+        },
+        "data": {
+          "Body": body,
+          "From": senderPhoneNumber,
+          "To": userInputPhone
+        }
+      }
+      
+      $.ajax(sendText).done(function (response) {
+          console.log("string");
+        console.log(response);
+      });
+    })
