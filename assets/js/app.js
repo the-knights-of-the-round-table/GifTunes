@@ -2,8 +2,8 @@ $(document).ready(function() {
 
 $("#gif-area").hide();
 $("#music-area").hide();
-// $("#share-area").hide();
-// $(".share-button").hide();
+$("#share-area").hide();
+$(".share-button").hide();
 
 var moods = ["happy", "angry", "funny", "nervous", "romantic", "sad", "relax", "crazy", "confused", "tired"];
 console.log(moods);
@@ -18,8 +18,19 @@ function makeButtons() {
       $("#buttons-area").append(button);
     }
 }
-
 makeButtons();
+
+function myFunction() {
+        $(".share-button").on("click", function () {
+            console.log("is working");
+        $("#share-area").show();
+        var share = document.getElementById("share-area");
+        // if (share.style.display === "none") {
+        //     share.style.display = "block";
+        // } else {
+        //     share.style.display = "none";
+        // }
+    });};
 
 // ON CLICK MOOD BUTTONS FUNCTION
     $('.mood').on('click', function() { 
@@ -58,8 +69,8 @@ makeButtons();
                 giphyImg.attr("src", results[i].images.fixed_height.url);
                 giphyImg.attr("data-animate", results[i].images.fixed_height.url);
 // Adding a bullet button
-                giphyImg.attr('<label class="radio-inline"></label>');
-                giphyImg.attr('<input type = "radio" name="optradio"');
+                // giphyImg.attr('<label class="radio-inline"></label>');
+                // giphyImg.attr('<input type = "radio" name="optradio"');
 
 
 // ADDING  A HEART FONT AWESOME FOR FAVORITES:
@@ -102,7 +113,7 @@ makeButtons();
 
 // SPOTIFY API:
                 var tempMood = p;
-                var trackSearchUrl = "https://api.spotify.com/v1/search/?type=track&limit=6&q=" + tempMood + "&access_token=" + response.access_token;
+                var trackSearchUrl = "https://api.spotify.com/v1/search/?type=track&limit=6&market=US&q=" + tempMood + "&access_token=" + response.access_token;
 
 // SPOTIFY AJAX CALL:
                 $.ajax({
@@ -122,32 +133,11 @@ makeButtons();
             });
         })
 })
-// function bullets() {
-//     for (i = 0; i < allQuestions.length; i++) {
-//         if ($("input[name='inlineRadioOptions" + i + "']:checked").parent().text() === allQuestions[i].answer) {
-//             correct++;
-//         }
-//         else if ($("input[name='inlineRadioOptions" + i + "']:checked").parent().text().length === 0) {
-//             unanswered++;
-//         }
-//         else {
-//             incorrect++;
-//         }
-//         ;
-//     }
-//     ;
-// }
+ 
 
 $(".item").children("img").on("click", function () {
     var state = $(this).attr("data-state")
 });
-
-$(document).on("click", "#gif-style", function (event) {
-    console.log("--------- THIS ---------")
-    console.log($(this));
-    
-    alert($(this).attr("data-id"))
-})
 
 //   // Initialize Firebase
 //   var config = {
@@ -176,39 +166,9 @@ $(document).on("click", "#gif-style", function (event) {
 
 
 // SHARE YOUR GIF/TUNE AREA - EMAIL/TEXT - this code used to work not anymore for now!
-// function myFunction() {
-//     $("#share-button").on("click", function () {
-//         console.log("is working");
-//     $("#share-area").css({"visibility": "visible"});
-//     var share = document.getElementById("share-area");
-//     if (share.style.display === "none") {
-//         share.style.display = "block";
-//     } else {
-//         share.style.display = "none";
-//     }
-// });
-//   };
+// 
 
-// myFunction();
-
-// SEND TEXT API AND SHENANIGANS:
-
-// var trackSearchUrl = "https://api.spotify.com/v1/search/?type=tracklimit=6&q=" + tempMood + "&access_token=" + response.access_token;
-
-// client.messages
-//   .create({
-//      body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
-//      from: '+13213209189',
-//      to: '+15558675310'
-//    })
-//   .then(message => console.log(message.sid));
-// });
-
-    // var accountSid = 'ACd119b33c22594f604f68d547a6239b9c';
-    // var authToken = '8a4e229119a830d767cc449b283388d8';
-    // var client = require('twilio')(accountSid, authToken);
-
-    // var userInputPhone = $("#recipient-phone").val().trim();
+myFunction();
 
 
 })})
