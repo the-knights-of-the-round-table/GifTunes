@@ -8,6 +8,7 @@ $(".share-button").hide();
 var moods = ["happy", "angry", "funny", "nervous", "romantic", "sad", "relax", "crazy", "confused", "tired"];
 console.log(moods);
 
+
 function makeButtons() {
     $("#buttons-area").empty();  
     for (var i = 0; i < moods.length; i++) {
@@ -25,6 +26,7 @@ function myFunction() {
             console.log("is working");
         $("#share-area").show();
         var share = document.getElementById("share-area");
+
         // if (share.style.display === "none") {
         //     share.style.display = "block";
         // } else {
@@ -36,6 +38,7 @@ function myFunction() {
     $('.mood').on('click', function() { 
         $("#gif-row").empty();
         $("#music-area").empty();
+    
 
 // GIF API:
         var p = $(this).data('name');
@@ -75,7 +78,7 @@ function myFunction() {
 
 // ADDING  A HEART FONT AWESOME FOR FAVORITES:
                 var heartSpan = $("<i>");
-                heartSpan.addClass("far fa-heart");
+                // heartSpan.addClass("far fa-heart");
                 heartSpan.attr("span-image", giphyImg);
 
                 gifDiv.append(giphyImg)

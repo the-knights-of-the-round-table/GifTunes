@@ -1,7 +1,13 @@
 $(document).ready(function() { 
     var selectedGif;
     var selectedSong;
+    var audio = document.getElementById("myAudio");
 
+
+    function playAudio() { 
+      console.log(audio);
+    audio.play(); 
+  } 
     //  Initialize Firebase
   var config = {
     apiKey: "AIzaSyADHvw-3oLDWIuFwEFmjFEg-pzmZvVNCx8",
@@ -19,12 +25,16 @@ $(document).ready(function() {
 $(document).on('click', ".img-responsive", function(){
     selectedGif = $(this).attr('src');
     updateMessageTextArea();
+    audio.play(); 
+    playAudio();
 })
 
 //pulling track preview (30s) link
 $(document).on("click", ".song-choice", function(event) {
     selectedSong = $(this).data("trackURL");
     updateMessageTextArea();
+    audio.play(); 
+    playAudio();
 })
 
 //add gif and song to #message
