@@ -21,14 +21,15 @@
 <body background="assets/images/giftunesbackground.jpg">
     <div class="header">
             <!-- <h1>GifTunes</h1> -->
-            <img class="logo" src="assets/images/giftunes.png" alt="Giftunes" width="8%">
-          </div>
+        <img class="logo" src="assets/images/giftunes.png" alt="Giftunes" width="8%">
+        <p></p>
+    </div>
           
-          <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        <ul>
+            <li><a class="about" href="index2.html">About us</a></li>
+        </ul>
+       
+    
 
     <!-- MOOD BUTTON AREA-->
     <div class="container-fluid">
@@ -51,14 +52,15 @@
 
     <div class="row output-area">
         <!-- GIF LEFT COLUMN -->
-        <div class="col-5" class id="gif-area" style="background-color:rgb(245, 245, 245, 0.3);">
+        <div class="col-5" class id="gif-area" style="background-color:rgba(255, 255, 255);">
+
             <div class="row" id="gif-row"></div>
             <div class="row" id="gif-row"></div>
             <div class="row" id="gif-row"></div>
         </div>
 
         <!-- MUSIC RIGHT COLUMN -->
-        <div class="col-5" id="music-area" style="background-color:rgb(245, 245, 245, 0.3);">
+        <div class="col-5" id="music-area" style="background-color:rgba(255, 255, 255);">
         </div>
     </div>
 </div>
@@ -92,18 +94,44 @@
 
 <!--Original Share Form-->
     <div id="sharing">
-        <button class="share-button">Share</button>
-         <div id="share-area"> 
-             <div class="col-12" style="background-color: whitesmoke;">
+    <button class="share-button">Share</button>
+    <div id="share-area">
+        <div class="col-12" style="background-color: rgb(255, 253, 253);">
             <form class="form-inline">
                 <h3>Send a Text</h3>
-                <input id="sender-name" class="form-control mr-sm-2" type="text" placeholder="Sender's Name" aria-label="sender's Name">
-                <input id="recipient-phone" class="form-control mr-sm-2" type="tel" placeholder="recipient's phone number" aria-label="recipient's phone number">
-                <textarea rows="5" cols="40" name="message" id="message"></textarea> <!--for testing messages-->
+                <input id="sender-name" class="form-control mr-sm-2" type="text" placeholder="Sender's Name"
+                    aria-label="sender's Name">
+                <input id="recipient-phone" class="form-control mr-sm-2" type="tel"
+                    placeholder="recipient's phone number" aria-label="recipient's phone number">
+                <textarea rows="5" cols="40" name="message" id="message"></textarea>
                 <button id="send-text-button" class="btn btn-outline-success my-2 my-sm-4" type="submit">Send</button>
             </form>
         </div>
         </div>
+    </div>
+    </div>
+
+<div class="spinner">
+  <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+  <div class="rect5"></div>
+</div>
+
+    <!-- SHARE AREA - SEND EMAIL -->
+    <!-- <div class="row" id="share-area">
+            <div class="col-11" style="background-color:#aaa;">Share area
+                <form class="form-inline">
+                    <input id="sender-email" class="form-control mr-sm-2" type="search" placeholder="Sender's email"
+                        aria-label="sender's email">
+                    <input id="recipient-email" class="form-control mr-sm-2" type="search" placeholder="recipient's email"
+                        aria-label="recipient's email">
+                    <button id="send-email-button" class="btn btn-outline-success my-2 my-sm-4" type="submit">Send</button>
+                </form>
+            </div>
+        </div> -->
+
     </div>
 
     <!-- FOOTER -->
@@ -115,6 +143,8 @@
 
     <!-- JS link -->
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/handle-clicks.js"></script>
+
 
     <!-- FIREBASE -->
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
