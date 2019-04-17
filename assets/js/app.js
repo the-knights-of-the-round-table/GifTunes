@@ -30,7 +30,19 @@ $(document).ready(function() {
   }
 
   makeButtons();
-
+  function myFunction() {
+    $(".share-button").on("click", function() {
+      console.log("is working");
+    //   
+    $("#share-area").show();
+      var share = document.getElementById("share-area");
+    //   if (share.style.display === "none") {
+    //     share.style.display = "block";
+    //   } else {
+    //     share.style.display = "none";
+    //   }
+    });
+  }
   // ON CLICK MOOD BUTTONS FUNCTION
   $(".mood").on("click", function() {
     $("#gif-row").empty();
@@ -112,7 +124,7 @@ $(document).ready(function() {
         // SPOTIFY API:
         var tempMood = p;
         var trackSearchUrl =
-          "https://api.spotify.com/v1/search/?type=track&limit=6&q=" +
+          "https://api.spotify.com/v1/search/?type=track&limit=6&q=" + //&market=US , NEED TO ADD!
           tempMood +
           "&access_token=" +
           response.access_token;
@@ -149,6 +161,7 @@ $(document).ready(function() {
         var state = $(this).attr("data-state");
       });
 
+//pulling track id
 $(document).on("click", ".track-div", function(event) {
     console.log("--------------------------- EVENT -----------------------");
     console.log($(this));
@@ -197,19 +210,7 @@ $(document).on("click", ".track-div", function(event) {
     //     document.getElementById("main").style.marginLeft= "0";
     //   };
 
-    // SHARE YOUR GIF/TUNE AREA - EMAIL/TEXT - this code used to work not anymore for now!
-    function myFunction() {
-      $("#share-button").on("click", function() {
-        console.log("is working");
-        $("#share-area").css({ visibility: "visible" });
-        var share = document.getElementById("share-area");
-        if (share.style.display === "none") {
-          share.style.display = "block";
-        } else {
-          share.style.display = "none";
-        }
-      });
-    }
+    // SHARE YOUR GIF/TUNE via TEXT
 
     myFunction();
 
