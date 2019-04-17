@@ -128,7 +128,26 @@ function myFunction() {
                     console.log(index + ": " + track.id);
 
 // SPOTIFY WIDGET DISPLAY:
-                    $("#music-area").append("<span class='spotify-song' style='z-index:1010'><iframe src='https://open.spotify.com/embed/track/" + track.id + "' width='195' height='250' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe></span>");
+var player = $("<iframe>")
+player.attr({
+    src: "https://open.spotify.com/embed/track/" + track.id,
+    width: 500,
+    height: 80,
+    frameborder: 0,
+    allowtransparency: "true",
+    allow: "encrypted-media"
+})
+var spotifySong = $("<span>")
+spotifySong.addClass("spotify-song");
+spotifySong.attr("style", "z-index:1010");
+spotifySong.append(player);
+var songChoice = $("<button>");
+spotifySong.append(songChoice);
+songChoice.text("Pick me!");
+songChoice.addClass("song-choice");
+songChoice.data("trackURL", track.preview_url);
+
+$("#music-area").append(spotifySong);
                     })
             });
         })

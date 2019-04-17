@@ -13,14 +13,18 @@ $(document).on("click", "button", function () {
             'Authorization': 'Bearer ' + accessToken
         },
         success: function(response) {
-            console.log(response);
+            console.log(response.tracks.items);
+            response.tracks.items.forEach(track => {
+                $("#music-area").append(track.preview_url);
+            
+            });
 
             var spotifyPlaylistID = response.id;
             console.log("The spotify playlist ID is: " + spotifyPlaylistID);
             var urlLink = response.external_urls.spotify;
             console.log("URL link: " + urlLink);
 
-            $("#music-area").append("<iframe src='https://open.spotify.com/embed/playlist/" + spotifyPlaylistID + "'" +  "width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
+            // $("#music-area").append("<iframe src='https://open.spotify.com/embed/playlist/" + spotifyPlaylistID + "'" +  "width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
         }
     
 })});
