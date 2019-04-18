@@ -9,17 +9,29 @@ $(document).ready(function() {
     audio.play(); 
   } 
     //  Initialize Firebase
+
+  // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyADHvw-3oLDWIuFwEFmjFEg-pzmZvVNCx8",
-    authDomain: "giftunes-project1.firebaseapp.com",
-    databaseURL: "https://giftunes-project1.firebaseio.com",
-    projectId: "giftunes-project1",
-    storageBucket: "giftunes-project1.appspot.com",
-    messagingSenderId: "949281859431"
+    apiKey: "AIzaSyDbCOEDuTVY2JXW4TNbx7Vu_qNOYnB0Zm0",
+    authDomain: "giftunes-4668f.firebaseapp.com",
+    databaseURL: "https://giftunes-4668f.firebaseio.com",
+    projectId: "giftunes-4668f",
+    storageBucket: "giftunes-4668f.appspot.com",
+    messagingSenderId: "626090857040"
   };
   firebase.initializeApp(config);
 
-  var dataRef = firebase.database();
+  var database = firebase.database();
+  var buttonPushed = 0;
+
+      $(".mood").on("click",function () {
+           buttonPushed = buttonPushed + 1;
+           console.log(buttonPushed);
+           database.ref().set({
+               buttonPushed: buttonPushed
+           });
+      });
+
 
   //pulling gif link
 $(document).on('click', ".img-responsive", function(){

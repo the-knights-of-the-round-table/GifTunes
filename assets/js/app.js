@@ -5,6 +5,7 @@ $("#music-area").hide();
 $("#share-area").hide();
 $(".share-button").hide();
 
+
 var moods = ["happy", "angry", "funny", "nervous", "romantic", "sad", "relax", "crazy", "confused", "tired"];
 console.log(moods);
 
@@ -15,14 +16,17 @@ function makeButtons() {
       var button = $("<button>");
       button.addClass("mood");
       button.attr("data-name", moods[i]);
+      button.attr("id", moods[i]);
       button.text(moods[i]);
       $("#buttons-area").append(button);
     }
 }
 makeButtons();
 
+
 function myFunction() {
         $(".share-button").on("click", function () {
+            $("#message").empty();
             console.log("is working");
         $("#share-area").show();
         var share = document.getElementById("share-area");
@@ -140,6 +144,7 @@ player.attr({
     allowtransparency: "true",
     allow: "encrypted-media"
 })
+
 var spotifySong = $("<span>")
 spotifySong.addClass("spotify-song");
 spotifySong.attr("style", "z-index:1010");
@@ -161,20 +166,6 @@ $(".item").children("img").on("click", function () {
     var state = $(this).attr("data-state")
 });
 
-//   // Initialize Firebase
-//   var config = {
-//     apiKey: "AIzaSyADHvw-3oLDWIuFwEFmjFEg-pzmZvVNCx8",
-//     authDomain: "giftunes-project1.firebaseapp.com",
-//     databaseURL: "https://giftunes-project1.firebaseio.com",
-//     projectId: "giftunes-project1",
-//     storageBucket: "giftunes-project1.appspot.com",
-//     messagingSenderId: "949281859431"
-//   };
-//   firebase.initializeApp(config);
-
-//   var dataRef = firebase.database();
-
-  
 // FAVORITE GIF SIDE BAR - not working at the moment:
 //   function openNav() {
 //     document.getElementById("mySidebar").style.width = "250px";
