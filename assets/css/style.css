@@ -2,7 +2,8 @@ body {
     background: url(../images/2420.png) no-repeat center fixed;
     background-size: 100%;
     background-size: cover;
-}
+    font-family: 'Crushed', cursive;
+  }
 .header{
     background-color: rgb(165, 129, 199);
     height: 160px;
@@ -88,7 +89,8 @@ ul {
     color: white;
     text-transform: uppercase;
     font-weight: bold;
-    border-radius: 50px;
+    font-size: 20px;
+    border-radius: 25px;  
     border-style: solid white 10px;
     background-color: #4CAF50;
 }

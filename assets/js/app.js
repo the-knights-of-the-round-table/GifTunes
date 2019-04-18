@@ -110,7 +110,6 @@ function myFunction() {
             }
             
             $.ajax(settings).done(function (response) {
-                console.log("Ajax Ajax Ajax");
                 console.log(response);
                 console.log(response.access_token);
 
