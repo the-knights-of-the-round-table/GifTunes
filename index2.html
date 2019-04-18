@@ -32,10 +32,36 @@
         </div>
     </nav>
 
-    <div class="w3-center">
-      <div class="w3-bar">
-        <button class="w3-button w3-black"><img class="factions" src="./assets/images/emblem.png" ></button>  
-      </div>
+    <img class="center" data-toggle="modal" id="myImg" src="./assets/images/emblem.png" alt="Uh-oh!"
+        style="width:100%;max-width:300px">
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- The Close Button -->
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Meet the squad!</h4>
+            </div>
+            <div class="modal-body">
+                <p>Check out what everyone else is working on: <br><br>
+                    Veronique: <a href="https://github.com/VeroniqueConus" target="blank">Github</a> <br><br>
+                    Kevin: <a href="https://github.com/kstokes16" target="blank">Github</a> <br><br>
+                    Illeana: <a href="https://github.com/ilyrodriguez" target="blank">Github</a> <br><br>
+                    Victor: <a href="https://github.com/vicdubbeld" target="blank">Github</a> <br><br>
+
+                </p>
+            </div>
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                </div>
+            </div>
+        </div>
+
     </div>
  
 
@@ -51,6 +77,7 @@
 
     <!-- JS link -->
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/modal.js"></script>
 
 </body>
 </html>
