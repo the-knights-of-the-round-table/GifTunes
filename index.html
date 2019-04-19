@@ -8,9 +8,7 @@
 
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css?family=Crushed" rel="stylesheet">
-                        
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -23,10 +21,26 @@
 
 <body background="assets/images/giftunesbackground.jpg">
     <audio id="myAudio"><source src="./assets/audio/Tiny Button Push-SoundBible.com-513260752.mp3" type="audio/mpeg"></audio>    
+        
+        <!-- <div class="modal" id="my-modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Welcome to GifTunes</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                        <p>Are you feeling a certain way and you want to share it with someone?</p>
+                        <p>Send a text mesage by just picking a Gif, a Tune and send</p>
+                        </div>
+                    </div>
+                </div>
+            </div>     -->
 
     <div class="header">
-            <!-- <h1>GifTunes</h1> -->
-        <img class="logo" src="assets/images/giftunes.png" alt="Giftunes" width="8%">
+        <img class="logo" src="assets/images/gtlogo.png" alt="Giftunes">
         <p></p>
     </div>
           
@@ -34,8 +48,6 @@
             <li><a class="about" href="index2.html">About us</a></li>
         </ul>
        
-    
-
     <!-- MOOD BUTTON AREA-->
     <div class="container-fluid">
         <div class="row">
@@ -69,31 +81,7 @@
         </div>
     </div>
 </div>
-
-    <!-- MODAL INSTRUCTIONS -->
-      
-      <div class="modal fade" id="textGifTune" tabindex="-1" role="dialog" aria-labelledby="textGifTuneTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="textGifTuneTitle">Text to a  Friend!</h5> 
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
      
-
-
 <!--Original Share Form-->
     <div id="sharing">
     <button class="share-button">Share</button>
@@ -113,26 +101,13 @@
     </div>
     </div>
 
-<div class="spinner">
-  <div class="rect1"></div>
-  <div class="rect2"></div>
-  <div class="rect3"></div>
-  <div class="rect4"></div>
-  <div class="rect5"></div>
-</div>
-
-    <!-- SHARE AREA - SEND EMAIL -->
-    <!-- <div class="row" id="share-area">
-            <div class="col-11" style="background-color:#aaa;">Share area
-                <form class="form-inline">
-                    <input id="sender-email" class="form-control mr-sm-2" type="search" placeholder="Sender's email"
-                        aria-label="sender's email">
-                    <input id="recipient-email" class="form-control mr-sm-2" type="search" placeholder="recipient's email"
-                        aria-label="recipient's email">
-                    <button id="send-email-button" class="btn btn-outline-success my-2 my-sm-4" type="submit">Send</button>
-                </form>
-            </div>
-        </div> -->
+    <div class="spinner">
+         <div class="rect1"></div>
+         <div class="rect2"></div>
+         <div class="rect3"></div>
+         <div class="rect4"></div>
+         <div class="rect5"></div>
+    </div>
 
     </div>
 

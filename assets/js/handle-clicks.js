@@ -1,4 +1,5 @@
-$(document).ready(function() { 
+$(document).ready(function() {
+
     var selectedGif;
     var selectedSong;
     var audio = document.getElementById("myAudio");

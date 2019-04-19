@@ -8,7 +8,6 @@ $(".share-button").hide();
 var moods = ["happy", "angry", "funny", "nervous", "romantic", "sad", "relax", "crazy", "confused", "tired"];
 console.log(moods);
 
-
 function makeButtons() {
     $("#buttons-area").empty();  
     for (var i = 0; i < moods.length; i++) {
@@ -26,12 +25,6 @@ function myFunction() {
             console.log("is working");
         $("#share-area").show();
         var share = document.getElementById("share-area");
-
-        // if (share.style.display === "none") {
-        //     share.style.display = "block";
-        // } else {
-        //     share.style.display = "none";
-        // }
     });};
 
 // ON CLICK MOOD BUTTONS FUNCTION
@@ -71,10 +64,6 @@ function myFunction() {
 
                 giphyImg.attr("src", results[i].images.fixed_height.url);
                 giphyImg.attr("data-animate", results[i].images.fixed_height.url);
-// Adding a bullet button
-                // giphyImg.attr('<label class="radio-inline"></label>');
-                // giphyImg.attr('<input type = "radio" name="optradio"');
-
 
 // ADDING  A HEART FONT AWESOME FOR FAVORITES:
                 var heartSpan = $("<i>");
@@ -160,37 +149,8 @@ $(".item").children("img").on("click", function () {
     var state = $(this).attr("data-state")
 });
 
-//   // Initialize Firebase
-//   var config = {
-//     apiKey: "AIzaSyADHvw-3oLDWIuFwEFmjFEg-pzmZvVNCx8",
-//     authDomain: "giftunes-project1.firebaseapp.com",
-//     databaseURL: "https://giftunes-project1.firebaseio.com",
-//     projectId: "giftunes-project1",
-//     storageBucket: "giftunes-project1.appspot.com",
-//     messagingSenderId: "949281859431"
-//   };
-//   firebase.initializeApp(config);
-
-//   var dataRef = firebase.database();
-
-  
-// FAVORITE GIF SIDE BAR - not working at the moment:
-//   function openNav() {
-//     document.getElementById("mySidebar").style.width = "250px";
-//     document.getElementById("main").style.marginLeft = "250px";
-//   }
-  
-//   function closeNav() {
-//     document.getElementById("mySidebar").style.width = "0";
-//     document.getElementById("main").style.marginLeft= "0";
-//   };
-
-
-// SHARE YOUR GIF/TUNE AREA - EMAIL/TEXT - this code used to work not anymore for now!
-// 
 
 myFunction();
-
 
 })})
 
