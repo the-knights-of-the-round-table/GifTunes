@@ -21,11 +21,14 @@ function makeButtons() {
 makeButtons();
 
 function myFunction() {
-        $(".share-button").on("click", function () {
-            console.log("is working");
-        $("#share-area").show();
-        var share = document.getElementById("share-area");
-    });};
+    $(".share-button").on("click", function () {
+        console.log("is working");
+    $("#share-area").show();
+    var share = document.getElementById("share-area");
+    $("#message").val('');
+    $("#sender-name").val('');
+    $("#recipient-phone").val('');
+});};
 
 // ON CLICK MOOD BUTTONS FUNCTION
     $('.mood').on('click', function() { 
@@ -183,7 +186,11 @@ $('#send-text-button').on('click', function(event) {
       }
       
       $.ajax(sendText).done(function (response) {
-          console.log("string");
-        console.log(response);
-      });
-    })
+        console.log("string");
+      console.log(response);
+    });
+    $("#sender-name").empty();
+    $("#recipient-phone").empty();
+    $("#message").empty();
+    $("#share-area").hide();
+  })

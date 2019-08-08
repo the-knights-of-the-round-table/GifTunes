@@ -1,0 +1,19 @@
+{
+  "name": "giftunes",
+  "version": "1.0.0",
+  "description": "![giftunes](https://user-images.githubusercontent.com/24906805/56449749-e88e7e80-62eb-11e9-990f-2b5cbb69707c.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-knights-of-the-round-table/GifTunes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-knights-of-the-round-table/GifTunes/issues"
+  },
+  "homepage": "https://github.com/the-knights-of-the-round-table/GifTunes#readme"
+}
